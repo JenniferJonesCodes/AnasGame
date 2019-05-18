@@ -10,6 +10,8 @@ app.get('/', (req, res) => {
     res.sendFile('index.html')
 })
 
-app.listen(1337, function () {
-    console.log('Listening on port 1337!')
+var port = process.env.PORT || 1337;
+
+app.listen(port, function () {
+    console.log('Listening on port '+ port);
 })
